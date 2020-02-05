@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>PlatziMediaPlayer.js</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./assets/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>PlatziMediaPlayer.js</h1>
+      <p>An extensible media player.</p>
+    </header>
+
+    <main class="container">
+      <video class="movie" id="video">
+        <source src="./assets/ejercicio.mp4" />
+      </video>
+
+      <button id="playPause">Play/Pause</button>
+    </main>
+      <script>
+
+        const video = document.getElementById("video"); //Traemso con selectores los elementos 
+        const playPause = document.getElementById("playPause");
+
+        playPause.addEventListener("click", mediaplayer);
+
+        class Player
+        {
+          constructor()
+          {
+            this.iniciopause();
+          }
+
+          iniciopause()
+          {
+            if (video.paused)
+            {
+              video.play();
+          }
+          else 
+          {
+            video.pause();
+          }
+        }
+      }
+
+        function mediaplayer ()
+        {
+          const player = new Player();
+        }
+
+         //llama al metodo play, no se pone dierectament ya que arroja un error.
+      </script>
+  </body>
+</html>

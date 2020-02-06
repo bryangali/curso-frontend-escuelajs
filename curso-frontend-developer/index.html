@@ -21,39 +21,6 @@
 
       <button id="playPause">Play/Pause</button>
     </main>
-      <script>
-
-        const video = document.getElementById("video"); //Traemso con selectores los elementos 
-        const playPause = document.getElementById("playPause");
-
-        playPause.addEventListener("click", mediaplayer);
-
-        class Player
-        {
-          constructor()
-          {
-            this.iniciopause();
-          }
-
-          iniciopause()
-          {
-            if (video.paused)
-            {
-              video.play();
-          }
-          else 
-          {
-            video.pause();
-          }
-        }
-      }
-
-        function mediaplayer ()
-        {
-          const player = new Player();
-        }
-
-         //llama al metodo play, no se pone dierectament ya que arroja un error.
-      </script>
+      <script type = "module" src = "assets/index.js"></script>
   </body>
 </html>

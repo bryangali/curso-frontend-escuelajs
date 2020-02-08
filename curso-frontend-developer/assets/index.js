@@ -1,30 +1,8 @@
-    const video = document.querySelector("video"); //Tremso el vídeo con su id 
-    const playPause = document.querySelector("button"); //damos pause 
+import MediaPlayer from "./MediaPlayer.js";
 
-    playPause.addEventListener("click", mediaplayer); 
-
-    class Player
-    {
-      constructor()
-      {
-        this.iniciopause();
-      }
-
-      iniciopause()
-      {
-        if (video.paused)
-        {
-          video.play();
-      }
-      else 
-      {
-        video.pause();
-      }
-    }
-  }
-
-    function mediaplayer ()
-    {
-      const player = new Player();
-    }
-      //llama al metodo play, no se pone dierectament ya que arroja un error.
+const video = document.querySelector("video"); //Seleccionamos el video y botón por su selector
+    const playPause = document.querySelector("button"); 
+    const playPause_v = document.querySelector("video");
+  playPause.addEventListener("click", MediaPlayer); //Llamamos a la función MediaPlayer cuando de hace click
+  playPause_v.addEventListener("click", MediaPlayer);
+  
